@@ -30,7 +30,7 @@ to the `require` section of your `composer.json` file.
 Usage
 -----
 
-Using `Search` class:
+Using `SearchClient` class:
 
 ```
 use Da\Google\Places\Client\SearchClient 
@@ -46,7 +46,7 @@ var_dump($search->text('restaurants in Inca Mallorca'));
 
 ```
 
-Using `Place` class:
+Using `PlaceClient` class:
 
 ```
 use Da\Google\Places\Client\PlaceClient
