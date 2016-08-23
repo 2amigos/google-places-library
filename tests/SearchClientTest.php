@@ -34,13 +34,11 @@ class SearchClientTest extends \PHPUnit_Framework_TestCase
 
     public function testNearbySearchInvalidRankby()
     {
-
         $this->expectException('\InvalidArgumentException');
         $this->expectExceptionMessage(
             'When using "rankby":"distance", you must specify at least one of the following: keyword, name, type.'
         );
         $this->client->nearby('-33.8670522,151.1957362', ['rankby' => 'distance', 'radius' => 500]);
-
     }
 
     public function testNearbySearchInvalidRadiusByProminence()

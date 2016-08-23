@@ -31,8 +31,9 @@ class PlaceClient extends AbstractClient
      * @param string $language the language to return the results. Defaults to 'en' (english).
      * @param array $params optional parameters
      *
-     * @return mixed|null
      * @throws RequestException if the request fails
+     *
+     * @return mixed|null
      */
     public function details($placeid, $language = 'en', $params = [])
     {
@@ -54,6 +55,7 @@ class PlaceClient extends AbstractClient
      *
      * @throws \InvalidArgumentException
      * @throws RequestException if the request fails
+     *
      * @return mixed|null
      */
     public function photo($reference, $params = [])
@@ -93,7 +95,7 @@ class PlaceClient extends AbstractClient
         if (strlen($name) > 255) {
             throw new \InvalidArgumentException('"$name" cannot be larger than 255 chars');
         }
-        $types = (array)$types;
+        $types = (array) $types;
         $data = $params;
         $data['location'] = $location;
         $data['name'] = $name;
@@ -122,6 +124,7 @@ class PlaceClient extends AbstractClient
      * @param string $reference The textual identifier that uniquely identifies this place
      *
      * @throws RequestException if the request fails
+     *
      * @return array
      */
     public function delete($reference)

@@ -25,12 +25,11 @@ class AbstractClientTest extends \PHPUnit_Framework_TestCase
     {
         $mock = new MockHandler(
             [
-                new Response(201, [], 'content')
+                new Response(201, [], 'content'),
             ]
         );
         $handler = HandlerStack::create($mock);
         $client = new Client(['handler' => $handler]);
-
 
         $instance = new TestAbstractClient('fakekey');
         $instance->setGuzzleClient($client);
@@ -41,7 +40,6 @@ class AbstractClientTest extends \PHPUnit_Framework_TestCase
         $method->setAccessible(true);
 
         $this->assertNull($method->invoke($instance, 'fake', 'get'));
-
     }
 }
 

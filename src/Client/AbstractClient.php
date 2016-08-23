@@ -95,7 +95,6 @@ class AbstractClient
         } else {
             return null;
         }
-
     }
 
     /**
