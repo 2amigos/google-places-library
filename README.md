@@ -33,9 +33,9 @@ Usage
 Using `Search` class:
 
 ```
-use Da\Google\Places\Search; 
+use Da\Google\Places\Client\SearchClient 
 
-$search = new Search(['key' => '{YOURGOOGLEAPIKEY}']);
+$search = new SearchClient('{YOURGOOGLEAPIKEY}');
 
 // $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
 
@@ -49,9 +49,9 @@ var_dump($search->text('restaurants in Inca Mallorca'));
 Using `Place` class:
 
 ```
-use Da\Google\Places\Place
+use Da\Google\Places\Client\PlaceClient
 
-$place = new Place(['key' => '{YOURGOOGLEAPIKEY}']);
+$place = new PlaceClient('{YOURGOOGLEAPIKEY}');
 
 // $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
 
