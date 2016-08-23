@@ -1,4 +1,4 @@
-# Selectize JS Widget for Yii2
+# Google Places API Library
 
 [![Latest Version](https://img.shields.io/github/tag/2amigos/google-places-library.svg?style=flat-square&label=release)](https://github.com/2amigos/google-places-library/tags)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
