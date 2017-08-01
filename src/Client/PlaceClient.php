@@ -1,10 +1,12 @@
 <?php
-/**
- * @copyright Copyright (c) 2013-2016 2amigOS! Consulting Group LLC
+
+/*
+ * This file is part of the 2amigos/google-places-library project.
  *
- * @link http://2amigos.us
+ * (c) 2amigOS! <http://2amigos.us/>
  *
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  */
 
 namespace Da\Google\Places\Client;
@@ -27,9 +29,9 @@ class PlaceClient extends AbstractClient
      * @see https://developers.google.com/places/documentation/details
      * @see https://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
      *
-     * @param string $placeid the place id
+     * @param string $placeid  the place id
      * @param string $language the language to return the results. Defaults to 'en' (english).
-     * @param array $params optional parameters
+     * @param array  $params   optional parameters
      *
      * @throws RequestException if the request fails
      *
@@ -50,11 +52,11 @@ class PlaceClient extends AbstractClient
      * @see https://developers.google.com/places/documentation/photos#place_photo_requests
      *
      * @param string $reference string identifier that uniquely identifies a photo. Photo references are returned from
-     * either a [[Search::text]], [[Search::nearby]], [[Search::radar]] or [[Place::details]] request.
-     * @param array $params optional parameters.
+     *                          either a [[Search::text]], [[Search::nearby]], [[Search::radar]] or [[Place::details]] request.
+     * @param array  $params    optional parameters.
      *
      * @throws \InvalidArgumentException
-     * @throws RequestException if the request fails
+     * @throws RequestException          if the request fails
      *
      * @return mixed|null
      */
@@ -78,15 +80,15 @@ class PlaceClient extends AbstractClient
      *
      * @see https://developers.google.com/places/documentation/actions#adding_a_place
      *
-     * @param array $location The textual latitude/longitude value from which you wish to add new place information.
-     * @param string $name The full text name of the place. Limited to 255 characters.
-     * @param array $types The category in which this place belongs.
+     * @param array  $location The textual latitude/longitude value from which you wish to add new place information.
+     * @param string $name     The full text name of the place. Limited to 255 characters.
+     * @param array  $types    The category in which this place belongs.
      * @param string $accuracy The accuracy of the location signal on which this request is based, expressed in meters.
      * @param string $language The language in which the place's name is being reported.
-     * @param array $params The extra recommended but not required parameters (ie address, phone_number, and website)
+     * @param array  $params   The extra recommended but not required parameters (ie address, phone_number, and website)
      *
      * @throws \InvalidArgumentException
-     * @throws RequestException if the request fails
+     * @throws RequestException          if the request fails
      *
      * @return array
      */

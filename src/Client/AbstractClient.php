@@ -1,10 +1,12 @@
 <?php
-/**
- * @copyright Copyright (c) 2013-2016 2amigOS! Consulting Group LLC
+
+/*
+ * This file is part of the 2amigos/google-places-library project.
  *
- * @link http://2amigos.us
+ * (c) 2amigOS! <http://2amigos.us/>
  *
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  */
 
 namespace Da\Google\Places\Client;
@@ -73,10 +75,10 @@ class AbstractClient
     /**
      * Makes a Url request and returns its response.
      *
-     * @param string $cmd the command
-     * @param string $method the method 'get' or 'post'
-     * @param array $params the parameters to be bound to the call
-     * @param array $options the options to be attached to the client
+     * @param string $cmd     the command
+     * @param string $method  the method 'get' or 'post'
+     * @param array  $params  the parameters to be bound to the call
+     * @param array  $options the options to be attached to the client
      *
      * @return mixed|null
      */
@@ -92,9 +94,8 @@ class AbstractClient
 
         if ($response->getStatusCode() === 200) {
             return $this->parseResponse($response->getBody()->getContents());
-        } else {
-            return null;
         }
+        return null;
     }
 
     /**
@@ -112,9 +113,9 @@ class AbstractClient
     /**
      * Returns an option from an array. If not set return default value.
      *
-     * @param array $options
+     * @param array  $options
      * @param string $param
-     * @param mixed $default
+     * @param mixed  $default
      *
      * @return mixed|null
      */

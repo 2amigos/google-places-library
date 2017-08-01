@@ -1,10 +1,12 @@
 <?php
-/**
- * @copyright Copyright (c) 2013-2016 2amigOS! Consulting Group LLC
+
+/*
+ * This file is part of the 2amigos/google-places-library project.
  *
- * @link http://2amigos.us
+ * (c) 2amigOS! <http://2amigos.us/>
  *
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  */
 
 namespace Da\Google\Places\Client;
@@ -30,11 +32,11 @@ class SearchClient extends AbstractClient
      * @see https://spreadsheets.google.com/pub?key=p9pdwsai2hDMsLkXsoM05KQ&gid=1
      *
      * @param string $location The latitude/longitude around which to retrieve Place information.
-     * This must be specified as latitude,longitude.
-     * @param array $params optional parameters
+     *                         This must be specified as latitude,longitude.
+     * @param array  $params   optional parameters
      *
      * @throws \InvalidArgumentException
-     * @throws RequestException if the request fails
+     * @throws RequestException          if the request fails
      *
      * @return mixed|null
      */
@@ -67,9 +69,9 @@ class SearchClient extends AbstractClient
      *
      * @see https://developers.google.com/places/documentation/search#TextSearchRequests
      *
-     * @param string $query The text string on which to search, for example: "restaurant". The Place service will return
-     * candidate matches based on this string and order the results based on their perceived relevance.
-     * @param array $params optional parameters
+     * @param string $query  The text string on which to search, for example: "restaurant". The Place service will return
+     *                       candidate matches based on this string and order the results based on their perceived relevance.
+     * @param array  $params optional parameters
      *
      * @throws RequestException if the request fails
      *
@@ -86,13 +88,13 @@ class SearchClient extends AbstractClient
      * Returns places of a specific area.
      *
      * @param string $location The latitude/longitude around which to retrieve Place information. This must be specified
-     * as latitude,longitude.
-     * @param string $radius Defines the distance (in meters) within which to return Place results. The maximum allowed
-     * radius is 50 000 meters.
-     * @param array $params optional parameters
+     *                         as latitude,longitude.
+     * @param string $radius   Defines the distance (in meters) within which to return Place results. The maximum allowed
+     *                         radius is 50 000 meters.
+     * @param array  $params   optional parameters
      *
      * @throws \InvalidArgumentException
-     * @throws RequestException if the request fails
+     * @throws RequestException          if the request fails
      *
      * @return mixed|null
      */
@@ -115,10 +117,10 @@ class SearchClient extends AbstractClient
      * @see https://developers.google.com/places/documentation/autocomplete#place_autocomplete_requests
      * @see https://developers.google.com/places/documentation/autocomplete#example_autocomplete_requests
      *
-     * @param string $input The text string on which to search. The Place Autocomplete service will return candidate
-     * matches based on this string and order results based on their perceived relevance.
+     * @param string $input    The text string on which to search. The Place Autocomplete service will return candidate
+     *                         matches based on this string and order results based on their perceived relevance.
      * @param string $language The language in which to return results.
-     * @param array $params optional parameters
+     * @param array  $params   optional parameters
      *
      * @throws RequestException if the request fails
      *
