@@ -100,7 +100,7 @@ Sample with all options available:
 We have added a PHP code fixer to standardize our code. It includes Symfony, PSR2 and some contributors rules. 
 
 ```bash 
-./vendor/bin/php-cs-fixer --config-file=.php_cs fix ./src
+./vendor/bin/php-cs-fixer --config-file=.php_cs.dist fix ./src
 ```
 
 ## Testing
