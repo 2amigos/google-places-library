@@ -41,6 +41,10 @@ class AbstractClient
      * @var \GuzzleHttp\Client a client to make requests to the API
      */
     protected $guzzle;
+    /**
+     * @var bool returns arrays instead of stdObjects on decoding JSON responses
+     */
+    protected $forceJsonArrayResponse = false;
 
     /**
      * AbstractClient constructor.
@@ -70,6 +74,16 @@ class AbstractClient
     public function getUrl($cmd)
     {
         return strtr($this->api, ['{cmd}' => $cmd, '{format}' => $this->format]);
+    }
+
+    /**
+     * Sets the flag for decoding JSON method.
+     *
+     * @param bool $value
+     */
+    public function forceJsonArrayResponse(bool $value = true)
+    {
+        $this->forceJsonArrayResponse = true;
     }
 
     /**
@@ -107,7 +121,7 @@ class AbstractClient
      */
     protected function parseResponse($contents)
     {
-        return $this->format == 'xml' ? new SimpleXMLElement($contents) : json_decode($contents);
+        return $this->format == 'xml' ? new SimpleXMLElement($contents) : json_decode($contents, $this->forceJsonArrayResponse);
     }
 
     /**

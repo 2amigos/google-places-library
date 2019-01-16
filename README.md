@@ -37,7 +37,8 @@ use Da\Google\Places\Client\SearchClient
 
 $search = new SearchClient('{YOURGOOGLEAPIKEY}');
 
-// $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
+// $search->forceJsonArrayResponse(); // if you want to get arrays instead of objects
+// $search = new SearchClient('{YOURGOOGLEAPIKEY}', 'xml'); // if you wish to handle XML responses (JSON is highly recommended)
 
 
 // If you setup the format in 'xml', the returned value will be an array.
@@ -53,8 +54,7 @@ use Da\Google\Places\Client\PlaceClient
 
 $place = new PlaceClient('{YOURGOOGLEAPIKEY}');
 
-// $this->format = 'xml'; // if you wish to handle XML responses (JSON is highly recommended)
-
+// $place = new PlaceClient('{YOURGOOGLEAPIKEY}', 'xml'); // if you wish to handle XML responses (JSON is highly recommended)
 
 $place->details('{REFERENCEIDOFPLACE}'));
 
@@ -100,7 +100,7 @@ Sample with all options available:
 We have added a PHP code fixer to standardize our code. It includes Symfony, PSR2 and some contributors rules. 
 
 ```bash 
-./vendor/bin/php-cs-fixer --config-file=.php_cs.dist fix ./src
+./vendor/bin/php-cs-fixer fix ./src
 ```
 
 ## Testing
