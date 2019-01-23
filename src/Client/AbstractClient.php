@@ -81,7 +81,7 @@ class AbstractClient
      *
      * @param bool $value
      */
-    public function forceJsonArrayResponse(bool $value = true)
+    public function forceJsonArrayResponse($value = true)
     {
         $this->forceJsonArrayResponse = true;
     }
